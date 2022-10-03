@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    color: rgb(219, 205, 177);
+    height: 100vh;
+    
+    text-transform: uppercase;
+    text-align: center;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr 2.4fr 0.8fr 1.2fr 0.7fr;
+
+    grid-template-areas: 
+    /*соответствие названий не необходимо*/
+    "hed menu menu menu"
+    "hero hero hero hero"
+    "main main image image"
+    "main main ex ex"
+    "banner banner banner banner"
+    ;
+
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    grid-area: hed;
+
+    align-items: center;
+    display: grid;
+}
+
+nav {
+    background-color: rgb(202, 59, 15);
+    grid-area: menu;
+    
+    align-items: center;
+    display: grid;
+}
+
+.hero {
+    background-color: rgb(82, 143, 143);
+    grid-area: hero;
+
+    align-items: center;
+    display: grid;
+}
+
+main {
+    background-color: rgb(126, 63, 63);
+    grid-area: main; 
+
+    align-items: center;
+    display: grid;
+}
+
+.banner{
+    background-color: rgb(187, 117, 13);
+    grid-area: banner; 
+
+    align-items: center;
+    display: grid;
+}
+
+.extra{
+    background-color: rgb(65, 126, 63);
+    grid-area: ex; 
+
+    align-items: center;
+    display: grid;
+}
+
+.image{
+    background-color: rgb(150, 150, 150);
+    grid-area: image; 
+
+    align-items: center;
+    display: grid;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px ) {
+    .container {
+        grid-template-columns: 1fr 1.6fr 1fr;
+        grid-template-rows: 0.5fr 1.8fr 2.5fr 1fr 0.8fr;
+    
+        grid-template-areas: 
+        /*соответствие названий не необходимо*/
+        "hed hed hed"
+        "hero hero hero"
+        "menu main main"
+        "menu banner banner"
+        "menu ex image"
+        ;
+    
+    }
+}
+
+@media (max-width: 480px ) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.8fr 1.5fr 2.6fr 1.1fr 1.3fr 1.3fr;
+    
+        grid-template-areas: 
+        /*соответствие названий не необходимо*/
+        "hed"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "ex"
+        "image"
+        ;
+    
+    }
+}
